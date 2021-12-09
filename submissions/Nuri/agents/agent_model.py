@@ -308,11 +308,3 @@ class GNNPolicyAno(BaseModel):
 
         output = self.output_module(variable_features).squeeze(-1)
         return output
-
-
-
-        return output
-
-
-
-
