@@ -8,3 +8,4 @@ Paper and code will be released soon.
 
 # Resouces
 [参赛方案介绍 - 旷视研究院](https://zhuanlan.zhihu.com/p/440726459)
+[模型参数](https://drive.google.com/drive/folders/1WuLt7ww-c45tdQ1DnE3vyozq3i1UORg9?usp=sharing)
