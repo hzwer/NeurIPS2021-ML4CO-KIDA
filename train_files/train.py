@@ -9,7 +9,7 @@ import random
 
 cf = configparser.ConfigParser()
 cf.read("./configs/train.ini")
-HOME_DIR = cf.get("train", "STORE_DIR")
+STORE_DIR = cf.get("train", "STORE_DIR")
 # hyper parameters
 BATCH_SIZE = cf.getint("train", "BATCH_SIZE")
 PRETRAIN_BATCH_SIZE = cf.getint("train", "PRETRAIN_BATCH_SIZE")
@@ -161,21 +161,21 @@ if __name__ == "__main__":
         train_files = []
         valid_files = []
         print(
-            f"{HOME_DIR}/samples/1_item_placement_dagger{args.file_count}/train/sample_*.pkl"
+            f"{STORE_DIR}/samples/1_item_placement_dagger{args.file_count}/train/sample_*.pkl"
         )
         for i in range(1, args.file_count + 1):
             train_files.extend(
                 glob.glob(
-                    f"{HOME_DIR}/samples/1_item_placement_dagger{args.file_count}/train/sample_*.pkl"
+                    f"{STORE_DIR}/samples/1_item_placement_dagger{args.file_count}/train/sample_*.pkl"
                 )
             )
             valid_files.extend(
                 glob.glob(
-                    f"{HOME_DIR}/samples/1_item_placement_dagger{args.file_count}/valid/sample_*.pkl"
+                    f"{STORE_DIR}/samples/1_item_placement_dagger{args.file_count}/valid/sample_*.pkl"
                 )
             )
         print(len(train_files))
-        running_dir = f"{HOME_DIR}/train_files/{args.exp_name}{i}"
+        running_dir = f"{STORE_DIR}/train_files/{args.exp_name}{i}"
 
     elif args.problem == "load_balancing":
         train_files = []
@@ -183,16 +183,16 @@ if __name__ == "__main__":
         for i in range(1, args.file_count + 1):
             train_files.extend(
                 glob.glob(
-                    f"{HOME_DIR}/samples/2_load_balancing_dagger{args.file_count}/train/sample_*.pkl"
+                    f"{STORE_DIR}/samples/2_load_balancing_dagger{args.file_count}/train/sample_*.pkl"
                 )
             )
             valid_files.extend(
                 glob.glob(
-                    f"{HOME_DIR}/samples/2_load_balancing_dagger{args.file_count}/valid/sample_*.pkl"
+                    f"{STORE_DIR}/samples/2_load_balancing_dagger{args.file_count}/valid/sample_*.pkl"
                 )
             )
         print(len(train_files))
-        running_dir = f"{HOME_DIR}/train_files/{args.exp_name}{i}"
+        running_dir = f"{STORE_DIR}/train_files/{args.exp_name}{i}"
 
     elif args.problem == "anonymous":
         train_files = []
@@ -200,16 +200,16 @@ if __name__ == "__main__":
         for i in range(1, args.file_count + 1):
             train_files.extend(
                 glob.glob(
-                    f"{HOME_DIR}/samples/3_anonymous_dagger{args.file_count}/train/sample_*.pkl"
+                    f"{STORE_DIR}/samples/3_anonymous_dagger{args.file_count}/train/sample_*.pkl"
                 )
             )
             valid_files.extend(
                 glob.glob(
-                    f"{HOME_DIR}/samples/3_anonymous_dagger{args.file_count}/valid/sample_*.pkl"
+                    f"{STORE_DIR}/samples/3_anonymous_dagger{args.file_count}/valid/sample_*.pkl"
                 )
             )
         print(len(train_files))
-        running_dir = f"{HOME_DIR}/train_files/{args.exp_name}{i}"
+        running_dir = f"{STORE_DIR}/train_files/{args.exp_name}{i}"
 
     else:
         raise NotImplementedError

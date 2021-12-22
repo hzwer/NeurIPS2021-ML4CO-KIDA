@@ -19,12 +19,12 @@ from agent_model import GNNPolicyItem, GNNPolicyLoad, GNNPolicyAno
 
 cf = configparser.ConfigParser()
 cf.read("./configs/dataset.ini")
-COMPETITION_DIR = cf.get("dataset", "COMPETITION_DIR")
+DATASET_DIR = cf.get("dataset", "DATASET_DIR")
 
 # import environment
-HOME_DIR = cf.get("dataset", "STORE_DIR")
+STORE_DIR = cf.get("dataset", "STORE_DIR")
 
-sys.path.append(COMPETITION_DIR)
+sys.path.append(DATASET_DIR)
 # parameters
 NODE_RECORD_PROB = cf.getfloat("dataset", "NODE_RECORD_PROB")
 TIME_LIMIT = cf.getint("dataset", "TIME_LIMIT")
@@ -416,30 +416,30 @@ if __name__ == "__main__":
     # get instances
     if args.problem == "item_placement":
         instances_train = glob.glob(
-            f"{COMPETITION_DIR}/instances/1_item_placement/train/*.mps.gz"
+            f"{DATASET_DIR}/1_item_placement/train/*.mps.gz"
         )
         instances_valid = glob.glob(
-            f"{COMPETITION_DIR}/instances/1_item_placement/valid/*.mps.gz"
+            f"{DATASET_DIR}/1_item_placement/valid/*.mps.gz"
         )
-        out_dir = f"{HOME_DIR}/samples/1_item_placement_dagger{args.file_count}"
+        out_dir = f"{STORE_DIR}/samples/1_item_placement_dagger{args.file_count}"
 
     elif args.problem == "load_balancing":
         instances_train = glob.glob(
-            f"{COMPETITION_DIR}/instances/2_load_balancing/train/*.mps.gz"
+            f"{DATASET_DIR}/2_load_balancing/train/*.mps.gz"
         )
         instances_valid = glob.glob(
-            f"{COMPETITION_DIR}/instances/2_load_balancing/valid/*.mps.gz"
+            f"{DATASET_DIR}/2_load_balancing/valid/*.mps.gz"
         )
-        out_dir = f"{HOME_DIR}/samples/2_load_balancing_dagger{args.file_count}"
+        out_dir = f"{STORE_DIR}/samples/2_load_balancing_dagger{args.file_count}"
 
     elif args.problem == "anonymous":
         instances_train = glob.glob(
-            f"{COMPETITION_DIR}/instances/3_anonymous/train/*.mps.gz"
+            f"{DATASET_DIR}/3_anonymous/train/*.mps.gz"
         )
         instances_valid = glob.glob(
-            f"{COMPETITION_DIR}/instances/3_anonymous/valid/*.mps.gz"
+            f"{DATASET_DIR}/3_anonymous/valid/*.mps.gz"
         )
-        out_dir = f"{HOME_DIR}/samples/3_anonymous_dagger{args.file_count}"
+        out_dir = f"{STORE_DIR}/samples/3_anonymous_dagger{args.file_count}"
 
     else:
         raise NotImplementedError
@@ -449,34 +449,34 @@ if __name__ == "__main__":
     print(f"{len(instances_valid)} validation instances for {args.valid_size} samples")
     if args.problem == "item_placement":
         print(
-            f"{HOME_DIR}/train_files/1_item_placement_dagger{args.file_count-1}/best_params.pkl"
+            f"{STORE_DIR}/train_files/1_item_placement_dagger{args.file_count-1}/best_params.pkl"
         )
         if os.path.exists(
-            f"{HOME_DIR}/train_files/1_item_placement_dagger{args.file_count-1}/best_params.pkl"
+            f"{STORE_DIR}/train_files/1_item_placement_dagger{args.file_count-1}/best_params.pkl"
         ):
             policy.load_state_dict(
                 torch.load(
-                    f"{HOME_DIR}/train_files/1_item_placement_dagger{args.file_count-1}/best_params.pkl"
+                    f"{STORE_DIR}/train_files/1_item_placement_dagger{args.file_count-1}/best_params.pkl"
                 )
             )
             print("load dict")
     if args.problem == "load_balancing":
         if os.path.exists(
-            f"{HOME_DIR}/train_files/2_load_placement_dagger{args.file_count-1}/best_params.pkl"
+            f"{STORE_DIR}/train_files/2_load_placement_dagger{args.file_count-1}/best_params.pkl"
         ):
             policy.load_state_dict(
                 torch.load(
-                    f"{HOME_DIR}/train_files/2_load_placement_dagger{args.file_count-1}/load_balancing/best_params.pkl"
+                    f"{STORE_DIR}/train_files/2_load_placement_dagger{args.file_count-1}/load_balancing/best_params.pkl"
                 )
             )
             print("load dict")
     if args.problem == "anonymous":
         if os.path.exists(
-            f"{HOME_DIR}/train_files/3_anonymous_dagger{args.file_count-1}/best_params.pkl"
+            f"{STORE_DIR}/train_files/3_anonymous_dagger{args.file_count-1}/best_params.pkl"
         ):
             policy.load_state_dict(
                 torch.load(
-                    f"{HOME_DIR}/train_files/3_anonymous_dagger{args.file_count-1}/best_params.pkl"
+                    f"{STORE_DIR}/train_files/3_anonymous_dagger{args.file_count-1}/best_params.pkl"
                 )
             )
             print("load dict")
