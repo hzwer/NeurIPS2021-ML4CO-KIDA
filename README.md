@@ -1,4 +1,4 @@
-# KIDA: Knowledge Inheritance in Data Aggregation
+# KIDA: Knowledge Inheritance in Dataset Aggregation
 
 This project releases our 1st place solution on [NeurIPS2021 ML4CO Dual Task](https://www.ecole.ai/2021/ml4co-competition/). 
 
