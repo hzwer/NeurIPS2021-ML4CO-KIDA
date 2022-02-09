@@ -48,4 +48,5 @@ source ano.sh
 ```
 
 # Resouces
+[Technical Report](https://arxiv.org/abs/2201.10328)
 [参赛方案介绍 - 旷视研究院](https://zhuanlan.zhihu.com/p/440726459)
