@@ -160,18 +160,15 @@ if __name__ == "__main__":
     if args.problem == "item_placement":
         train_files = []
         valid_files = []
-        print(
-            f"{STORE_DIR}/samples/1_item_placement_dagger{args.file_count}/train/sample_*.pkl"
-        )
         for i in range(1, args.file_count + 1):
             train_files.extend(
                 glob.glob(
-                    f"{STORE_DIR}/samples/1_item_placement_dagger{args.file_count}/train/sample_*.pkl"
+                    f"{STORE_DIR}/samples/1_item_placement_dagger{i}/train/sample_*.pkl"
                 )
             )
             valid_files.extend(
                 glob.glob(
-                    f"{STORE_DIR}/samples/1_item_placement_dagger{args.file_count}/valid/sample_*.pkl"
+                    f"{STORE_DIR}/samples/1_item_placement_dagger{i}/valid/sample_*.pkl"
                 )
             )
         print(len(train_files))
@@ -183,12 +180,12 @@ if __name__ == "__main__":
         for i in range(1, args.file_count + 1):
             train_files.extend(
                 glob.glob(
-                    f"{STORE_DIR}/samples/2_load_balancing_dagger{args.file_count}/train/sample_*.pkl"
+                    f"{STORE_DIR}/samples/2_load_balancing_dagger{i}/train/sample_*.pkl"
                 )
             )
             valid_files.extend(
                 glob.glob(
-                    f"{STORE_DIR}/samples/2_load_balancing_dagger{args.file_count}/valid/sample_*.pkl"
+                    f"{STORE_DIR}/samples/2_load_balancing_dagger{i}/valid/sample_*.pkl"
                 )
             )
         print(len(train_files))
@@ -200,12 +197,12 @@ if __name__ == "__main__":
         for i in range(1, args.file_count + 1):
             train_files.extend(
                 glob.glob(
-                    f"{STORE_DIR}/samples/3_anonymous_dagger{args.file_count}/train/sample_*.pkl"
+                    f"{STORE_DIR}/samples/3_anonymous_dagger{i}/train/sample_*.pkl"
                 )
             )
             valid_files.extend(
                 glob.glob(
-                    f"{STORE_DIR}/samples/3_anonymous_dagger{args.file_count}/valid/sample_*.pkl"
+                    f"{STORE_DIR}/samples/3_anonymous_dagger{i}/valid/sample_*.pkl"
                 )
             )
         print(len(train_files))
