@@ -306,7 +306,7 @@ if __name__ == "__main__":
 
         epoch_valid_files = rng.choice(
             valid_files,
-            int(np.floor(TRAIN_NUM / BATCH_SIZE)) * BATCH_SIZE,
+            int(np.floor(VALID_NUM / BATCH_SIZE)) * BATCH_SIZE,
             replace=True,
         )
         valid_data = GraphDataset(epoch_valid_files)
