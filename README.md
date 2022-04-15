@@ -1,9 +1,9 @@
 # KIDA: Knowledge Inheritance in Dataset Aggregation
 Zixuan Cao, Yang Xu, [Zhewei Huang](https://scholar.google.com/citations?user=zJEkaG8AAAAJ&hl=zh-CN&oi=sra), [Shuchang Zhou](https://scholar.google.com/citations?user=zYI0rysAAAAJ&hl=zh-CN&oi=sra)
 
-This project releases our 1st place solution on [NeurIPS2021 ML4CO Dual Task](https://www.ecole.ai/2021/ml4co-competition/). 
+This project releases our 1st place solution on [NeurIPS2021 ML4CO Dual Task](https://www.ecole.ai/2021/ml4co-competition/). The official competition report is now on [arXiv](https://arxiv.org/abs/2203.02433). 
 
-[Arxiv](https://arxiv.org/abs/2201.10328), [Slide](https://drive.google.com/file/d/1O8T1Jv6CE_fQDnYdcZ6ftFEZPXabOVay/view?usp=sharing) and [model weights](https://drive.google.com/drive/folders/1WuLt7ww-c45tdQ1DnE3vyozq3i1UORg9?usp=sharing) are available.
+[arXiv](https://arxiv.org/abs/2201.10328), [Slide](https://drive.google.com/file/d/1O8T1Jv6CE_fQDnYdcZ6ftFEZPXabOVay/view?usp=sharing) and [model weights](https://drive.google.com/drive/folders/1WuLt7ww-c45tdQ1DnE3vyozq3i1UORg9?usp=sharing) are available.
 
 #  Environment Setup
 Follow the [tutorials](https://github.com/ds4dm/ml4co-competition/blob/main/START.md) of [ml4co-competition](https://github.com/ds4dm/ml4co-competition) to download ML4CO instance dataset and set up your Python dependencies.  Suppose the directory of instance dataset is `/YOUR_PATH/ml4co-competition/instances`. The dependencies of KIDA can be found in  `./Nuri/conda.yaml` . Anaconda environment of ml4co can be created by `source init.sh`
@@ -46,6 +46,24 @@ source item.sh
 source load.sh
 # Train Anonymous Benchmark
 source ano.sh
+```
+
+## Citation
+
+```
+@article{cao2022ml4co,
+  title={ML4CO-KIDA: Knowledge Inheritance in Dataset Aggregation},
+  author={Cao, Zixuan and Xu, Yang and Huang, Zhewei and Zhou, Shuchang},
+  journal={arXiv preprint arXiv:2201.10328},
+  year={2022}
+}
+
+@article{gasse2022machine,
+  title={The Machine Learning for Combinatorial Optimization Competition (ML4CO): Results and Insights},
+  author={Gasse, Maxime and Cappart, Quentin and Charfreitag, Jonas and Charlin, Laurent and Ch{\'e}telat, Didier and Chmiela, Antonia and Dumouchelle, Justin and Gleixner, Ambros and Kazachkov, Aleksandr M and Khalil, Elias and others},
+  journal={arXiv preprint arXiv:2203.02433},
+  year={2022}
+}
 ```
 
 # Resouces
