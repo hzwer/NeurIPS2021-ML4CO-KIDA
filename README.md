@@ -1,4 +1,5 @@
 # KIDA: Knowledge Inheritance in Dataset Aggregation
+Zixuan Cao, Yang Xu, [Zhewei Huang](https://scholar.google.com/citations?user=zJEkaG8AAAAJ&hl=zh-CN&oi=sra), [Shuchang Zhou](https://scholar.google.com/citations?user=zYI0rysAAAAJ&hl=zh-CN&oi=sra)
 
 This project releases our 1st place solution on [NeurIPS2021 ML4CO Dual Task](https://www.ecole.ai/2021/ml4co-competition/). 
 
