@@ -1,9 +1,9 @@
 # KIDA: Knowledge Inheritance in Dataset Aggregation
 Zixuan Cao, Yang Xu, [Zhewei Huang](https://scholar.google.com/citations?user=zJEkaG8AAAAJ&hl=zh-CN&oi=sra), [Shuchang Zhou](https://scholar.google.com/citations?user=zYI0rysAAAAJ&hl=zh-CN&oi=sra)
 
-This project releases our 1st place solution on [NeurIPS2021 ML4CO Dual Task](https://www.ecole.ai/2021/ml4co-competition/). The official competition report is now on [arXiv](https://arxiv.org/abs/2203.02433). 
+This project releases our 1st place solution on [NeurIPS2021 ML4CO Dual Task](https://www.ecole.ai/2021/ml4co-competition/). The official competition report (including ours) is now on [arXiv](https://arxiv.org/abs/2203.02433). 
 
-[arXiv](https://arxiv.org/abs/2201.10328), [Slide](https://drive.google.com/file/d/1O8T1Jv6CE_fQDnYdcZ6ftFEZPXabOVay/view?usp=sharing) and [model weights](https://drive.google.com/drive/folders/1WuLt7ww-c45tdQ1DnE3vyozq3i1UORg9?usp=sharing) are available.
+For this work, [arXiv](https://arxiv.org/abs/2201.10328), [Slide](https://drive.google.com/file/d/1O8T1Jv6CE_fQDnYdcZ6ftFEZPXabOVay/view?usp=sharing) and [model weights](https://drive.google.com/drive/folders/1WuLt7ww-c45tdQ1DnE3vyozq3i1UORg9?usp=sharing) are available.
 
 #  Environment Setup
 Follow the [tutorials](https://github.com/ds4dm/ml4co-competition/blob/main/START.md) of [ml4co-competition](https://github.com/ds4dm/ml4co-competition) to download ML4CO instance dataset and set up your Python dependencies.  Suppose the directory of instance dataset is `/YOUR_PATH/ml4co-competition/instances`. The dependencies of KIDA can be found in  `./Nuri/conda.yaml` . Anaconda environment of ml4co can be created by `source init.sh`
