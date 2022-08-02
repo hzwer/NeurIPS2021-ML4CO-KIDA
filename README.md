@@ -58,11 +58,13 @@ source ano.sh
   year={2022}
 }
 
-@article{gasse2022machine,
+@inproceedings{gasse2022machine,
   title={The Machine Learning for Combinatorial Optimization Competition (ML4CO): Results and Insights},
-  author={Gasse, Maxime and Cappart, Quentin and Charfreitag, Jonas and Charlin, Laurent and Ch{\'e}telat, Didier and Chmiela, Antonia and Dumouchelle, Justin and Gleixner, Ambros and Kazachkov, Aleksandr M and Khalil, Elias and others},
-  journal={arXiv preprint arXiv:2203.02433},
-  year={2022}
+  author={Gasse, Maxime and Bowly, Simon and Cappart, Quentin and Charfreitag, Jonas and Charlin, Laurent and Ch{\'e}telat, Didier and Chmiela, Antonia and Dumouchelle, Justin and Gleixner, Ambros and Kazachkov, Aleksandr M and others},
+  booktitle={NeurIPS 2021 Competitions and Demonstrations Track},
+  pages={220--231},
+  year={2022},
+  organization={PMLR}
 }
 ```
 
